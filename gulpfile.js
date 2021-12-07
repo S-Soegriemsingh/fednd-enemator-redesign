@@ -34,13 +34,13 @@ gulp.task('sass', function()
     return (
         // Get the SCSS files to mutate
         gulp.src('./assets/css/**/*.scss')
-        
+
         // Chain an additional Stream
         .pipe(
             // Compile the SCSS files
             sass({
                 // Minify the SCSS files
-                outputStyle: 'compressed'
+                outputStyle: 'expanded'
             })
         )
 
@@ -50,15 +50,6 @@ gulp.task('sass', function()
             autoprefixer()
         )
 
-        // Chain an additional Stream
-        .pipe(
-            // Rename the SCSS files
-            rename({
-                // Add the suffix .min e.g. .min.css
-                suffix: '.min'
-            })
-        )
-        
         // Chain an additional Stream
         .pipe(
             // Dynamically set the destination of the files
@@ -96,7 +87,7 @@ gulp.task('sass', function()
                  suffix: '.min'
              })
          )
-         
+
          // Chain an additional Stream
          .pipe(
              // Dynamically set the destination of the files
@@ -110,7 +101,7 @@ gulp.task('sass', function()
 
 /**
  * Watch Files
- * 
+ *
  * The watch function needs a relative path to the files in order to start
  * watching them.
  */
