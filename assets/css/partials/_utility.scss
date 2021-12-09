@@ -1,0 +1,30 @@
+// Flexbox
+.flex {
+    display: flex;
+    gap: var(--gap, 1rem);
+}
+
+// Container
+.container {
+    padding-inline: 2em;
+    margin-inline: auto;
+    max-width: 80rem;
+}
+
+// Screen Readers
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+// Banner Shape
+.banner {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 75% 75%, 25% 75%, 0 100%);
+}
