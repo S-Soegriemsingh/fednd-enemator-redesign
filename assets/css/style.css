@@ -95,7 +95,8 @@ select {
   width: 40px;
 }
 .icon--big {
-  border-width: 0.5rem;
+  border-width: 0.75rem;
+  padding: 0.5rem;
   width: 140px;
 }
 
@@ -132,7 +133,7 @@ select {
   justify-content: space-between;
   padding: 0 1rem;
   width: var(--spacing-width);
-  height: 120px;
+  height: 70px;
 }
 .character__toolbar {
   display: flex;
