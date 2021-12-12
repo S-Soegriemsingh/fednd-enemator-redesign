@@ -8,12 +8,11 @@
     <title>FEDnD Enemator Redesign</title>
 </head>
 <body>
-    <main class="flex container">
+    <main class="flex gap container">
         <div class="character">
-            <nav class="character__navigation">
+            <nav class="character__navigation padding-x">
                 <img src="assets/img/icons/book.png" alt="Mage" class="icon icon--big">
-
-                <div class="character__toolbar">
+                <div class="flex gap">
                     <a href="#" class="icon">
                         <img src="assets/img/icons/weapon.png" alt="Random Weapon">
                     </a>
@@ -24,20 +23,570 @@
                         <img src="assets/img/icons/cross.png" alt="Delete Character">
                     </a>
                 </div>
-
                 <span class="character__level">12</span>
             </nav>
-            <div class="character__information information banner">
-                HPForm
-                StatTable
+            <div class="character__information banner padding-x">
+                <form class="character__form">
+                    <select name="weapon" class="character__weapon-select">
+                        <option value="Iron Sword">Iron Sword</option>
+                        <option value="Iron Sword">Steel Sword</option>
+                        <option value="Iron Sword">Silver Sword</option>
+                    </select>
+                    <label class="character__health health flex">
+                        <span class="health__name">HP</span>
+                        <span class="health__current">23</span>
+                        /
+                        <span class="health__maximum">23</span>
+                        <div class="health__input flex">
+                            <input type="text" class="health__modifier">
+                            <button class="health__add button">+</button>
+                            <span class="health__divider">/</span>
+                            <button class="health__subtract button">-</button>
+                        </div>
+                    </label>
+                </form>
+                <table class="character__stats stats">
+                    <tbody>
+                        <tr>
+                            <th class="stats__name">STR</th>
+                            <td class="stats__value">03</td>
+                            <th class="stats__name">DMG</th>
+                            <td class="stats__value--right">07</td>
+                        </tr>
+                        <tr>
+                            <th class="stats__name">MAG</th>
+                            <td class="stats__value">03</td>
+                            <th class="stats__name">DMG</th>
+                            <td class="stats__value--right">-</td>
+                        </tr>
+                        <tr>
+                            <th class="stats__name">SKL</th>
+                            <td class="stats__value">04</td>
+                            <th class="stats__name">HIT</th>
+                            <td class="stats__value--right">10</td>
+                        </tr>
+                        <tr>
+                            <th class="stats__name"></th>
+                            <td class="stats__value"></td>
+                            <th class="stats__name">CRT</th>
+                            <td class="stats__value--right">1d4</td>
+                        </tr>
+                        <tr>
+                            <th class="stats__name">SPD</th>
+                            <td class="stats__value">07</td>
+                            <th class="stats__name">AS</th>
+                            <td class="stats__value--right">07</td>
+                        </tr>
+                        <tr>
+                            <th class="stats__name"></th>
+                            <td class="stats__value"></td>
+                            <th class="stats__name">AVO</th>
+                            <td class="stats__value--right">09</td>
+                        </tr>
+                        <tr>
+                            <th class="stats__name">LCK</th>
+                            <td class="stats__value">05</td>
+                            <th class="stats__name">DDG</th>
+                            <td class="stats__value--right">05</td>
+                        </tr>
+                        <tr>
+                            <th class="stats__name">DEF</th>
+                            <td class="stats__value">03</td>
+                            <th class="stats__name">PRT</th>
+                            <td class="stats__value--right">03</td>
+                        </tr>
+                        <tr>
+                            <th class="stats__name">RES</th>
+                            <td class="stats__value">04</td>
+                            <th class="stats__name">RSL</th>
+                            <td class="stats__value--right">04</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-            <div class="character__notes notes banner">
-                Title
-                NotesForm
+            <div class="character__notes banner banner--small padding-x text-center">
+                <h2 class="title">Notes</h2>
+                <form class="character__form">
+                    <textarea class="character__notes-field"></textarea>
+                </form>
             </div>
-            <div class="character__emblems emblems">
-                Title
-                Emblems
+            <div class="character__emblems padding-x text-center">
+                <h2 class="title">Emblems</h2>
+                <div class="flex gap justify-center">
+                    <a href="#" class="icon icon--rond">
+                        <img src="assets/img/icons/axe.png" alt="Axe Emblem">
+                    </a>
+                    <a href="#" class="icon icon--rond">
+                        <img src="assets/img/icons/book.png" alt="Book Emblem">
+                    </a>
+                    <a href="#" class="icon icon--rond">
+                        <img src="assets/img/icons/sword.png" alt="Sword Emblem">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="character">
+            <nav class="character__navigation padding-x">
+                <img src="assets/img/icons/book.png" alt="Mage" class="icon icon--big">
+                <div class="flex gap">
+                    <a href="#" class="icon">
+                        <img src="assets/img/icons/weapon.png" alt="Random Weapon">
+                    </a>
+                    <a href="#" class="icon">
+                        <img src="assets/img/icons/loot.png" alt="Random Loot">
+                    </a>
+                    <a href="#" class="icon">
+                        <img src="assets/img/icons/cross.png" alt="Delete Character">
+                    </a>
+                </div>
+                <span class="character__level">12</span>
+            </nav>
+            <div class="character__information banner padding-x">
+                <form class="character__form">
+                    <select name="weapon" class="character__weapon-select">
+                        <option value="Iron Sword">Iron Sword</option>
+                        <option value="Iron Sword">Steel Sword</option>
+                        <option value="Iron Sword">Silver Sword</option>
+                    </select>
+                    <label class="character__health health flex">
+                        <span class="health__name">HP</span>
+                        <span class="health__current">23</span>
+                        /
+                        <span class="health__maximum">23</span>
+                        <div class="health__input flex">
+                            <input type="text" class="health__modifier">
+                            <button class="health__add button">+</button>
+                            <span class="health__divider">/</span>
+                            <button class="health__subtract button">-</button>
+                        </div>
+                    </label>
+                </form>
+                <table class="character__stats stats">
+                    <tbody>
+                        <tr>
+                            <th class="stats__name">STR</th>
+                            <td class="stats__value">03</td>
+                            <th class="stats__name">DMG</th>
+                            <td class="stats__value--right">07</td>
+                        </tr>
+                        <tr>
+                            <th class="stats__name">MAG</th>
+                            <td class="stats__value">03</td>
+                            <th class="stats__name">DMG</th>
+                            <td class="stats__value--right">-</td>
+                        </tr>
+                        <tr>
+                            <th class="stats__name">SKL</th>
+                            <td class="stats__value">04</td>
+                            <th class="stats__name">HIT</th>
+                            <td class="stats__value--right">10</td>
+                        </tr>
+                        <tr>
+                            <th class="stats__name"></th>
+                            <td class="stats__value"></td>
+                            <th class="stats__name">CRT</th>
+                            <td class="stats__value--right">1d4</td>
+                        </tr>
+                        <tr>
+                            <th class="stats__name">SPD</th>
+                            <td class="stats__value">07</td>
+                            <th class="stats__name">AS</th>
+                            <td class="stats__value--right">07</td>
+                        </tr>
+                        <tr>
+                            <th class="stats__name"></th>
+                            <td class="stats__value"></td>
+                            <th class="stats__name">AVO</th>
+                            <td class="stats__value--right">09</td>
+                        </tr>
+                        <tr>
+                            <th class="stats__name">LCK</th>
+                            <td class="stats__value">05</td>
+                            <th class="stats__name">DDG</th>
+                            <td class="stats__value--right">05</td>
+                        </tr>
+                        <tr>
+                            <th class="stats__name">DEF</th>
+                            <td class="stats__value">03</td>
+                            <th class="stats__name">PRT</th>
+                            <td class="stats__value--right">03</td>
+                        </tr>
+                        <tr>
+                            <th class="stats__name">RES</th>
+                            <td class="stats__value">04</td>
+                            <th class="stats__name">RSL</th>
+                            <td class="stats__value--right">04</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="character__notes banner banner--small padding-x text-center">
+                <h2 class="title">Notes</h2>
+                <form class="character__form">
+                    <textarea class="character__notes-field"></textarea>
+                </form>
+            </div>
+            <div class="character__emblems padding-x text-center">
+                <h2 class="title">Emblems</h2>
+                <div class="flex gap justify-center">
+                    <a href="#" class="icon icon--rond">
+                        <img src="assets/img/icons/axe.png" alt="Axe Emblem">
+                    </a>
+                    <a href="#" class="icon icon--rond">
+                        <img src="assets/img/icons/book.png" alt="Book Emblem">
+                    </a>
+                    <a href="#" class="icon icon--rond">
+                        <img src="assets/img/icons/sword.png" alt="Sword Emblem">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="character">
+            <nav class="character__navigation padding-x">
+                <img src="assets/img/icons/book.png" alt="Mage" class="icon icon--big">
+                <div class="flex gap">
+                    <a href="#" class="icon">
+                        <img src="assets/img/icons/weapon.png" alt="Random Weapon">
+                    </a>
+                    <a href="#" class="icon">
+                        <img src="assets/img/icons/loot.png" alt="Random Loot">
+                    </a>
+                    <a href="#" class="icon">
+                        <img src="assets/img/icons/cross.png" alt="Delete Character">
+                    </a>
+                </div>
+                <span class="character__level">12</span>
+            </nav>
+            <div class="character__information banner padding-x">
+                <form class="character__form">
+                    <select name="weapon" class="character__weapon-select">
+                        <option value="Iron Sword">Iron Sword</option>
+                        <option value="Iron Sword">Steel Sword</option>
+                        <option value="Iron Sword">Silver Sword</option>
+                    </select>
+                    <label class="character__health health flex">
+                        <span class="health__name">HP</span>
+                        <span class="health__current">23</span>
+                        /
+                        <span class="health__maximum">23</span>
+                        <div class="health__input flex">
+                            <input type="text" class="health__modifier">
+                            <button class="health__add button">+</button>
+                            <span class="health__divider">/</span>
+                            <button class="health__subtract button">-</button>
+                        </div>
+                    </label>
+                </form>
+                <table class="character__stats stats">
+                    <tbody>
+                        <tr>
+                            <th class="stats__name">STR</th>
+                            <td class="stats__value">03</td>
+                            <th class="stats__name">DMG</th>
+                            <td class="stats__value--right">07</td>
+                        </tr>
+                        <tr>
+                            <th class="stats__name">MAG</th>
+                            <td class="stats__value">03</td>
+                            <th class="stats__name">DMG</th>
+                            <td class="stats__value--right">-</td>
+                        </tr>
+                        <tr>
+                            <th class="stats__name">SKL</th>
+                            <td class="stats__value">04</td>
+                            <th class="stats__name">HIT</th>
+                            <td class="stats__value--right">10</td>
+                        </tr>
+                        <tr>
+                            <th class="stats__name"></th>
+                            <td class="stats__value"></td>
+                            <th class="stats__name">CRT</th>
+                            <td class="stats__value--right">1d4</td>
+                        </tr>
+                        <tr>
+                            <th class="stats__name">SPD</th>
+                            <td class="stats__value">07</td>
+                            <th class="stats__name">AS</th>
+                            <td class="stats__value--right">07</td>
+                        </tr>
+                        <tr>
+                            <th class="stats__name"></th>
+                            <td class="stats__value"></td>
+                            <th class="stats__name">AVO</th>
+                            <td class="stats__value--right">09</td>
+                        </tr>
+                        <tr>
+                            <th class="stats__name">LCK</th>
+                            <td class="stats__value">05</td>
+                            <th class="stats__name">DDG</th>
+                            <td class="stats__value--right">05</td>
+                        </tr>
+                        <tr>
+                            <th class="stats__name">DEF</th>
+                            <td class="stats__value">03</td>
+                            <th class="stats__name">PRT</th>
+                            <td class="stats__value--right">03</td>
+                        </tr>
+                        <tr>
+                            <th class="stats__name">RES</th>
+                            <td class="stats__value">04</td>
+                            <th class="stats__name">RSL</th>
+                            <td class="stats__value--right">04</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="character__notes banner banner--small padding-x text-center">
+                <h2 class="title">Notes</h2>
+                <form class="character__form">
+                    <textarea class="character__notes-field"></textarea>
+                </form>
+            </div>
+            <div class="character__emblems padding-x text-center">
+                <h2 class="title">Emblems</h2>
+                <div class="flex gap justify-center">
+                    <a href="#" class="icon icon--rond">
+                        <img src="assets/img/icons/axe.png" alt="Axe Emblem">
+                    </a>
+                    <a href="#" class="icon icon--rond">
+                        <img src="assets/img/icons/book.png" alt="Book Emblem">
+                    </a>
+                    <a href="#" class="icon icon--rond">
+                        <img src="assets/img/icons/sword.png" alt="Sword Emblem">
+                    </a>
+                </div>
+            </div>
+        </div>
+                <div class="character">
+            <nav class="character__navigation padding-x">
+                <img src="assets/img/icons/book.png" alt="Mage" class="icon icon--big">
+                <div class="flex gap">
+                    <a href="#" class="icon">
+                        <img src="assets/img/icons/weapon.png" alt="Random Weapon">
+                    </a>
+                    <a href="#" class="icon">
+                        <img src="assets/img/icons/loot.png" alt="Random Loot">
+                    </a>
+                    <a href="#" class="icon">
+                        <img src="assets/img/icons/cross.png" alt="Delete Character">
+                    </a>
+                </div>
+                <span class="character__level">12</span>
+            </nav>
+            <div class="character__information banner padding-x">
+                <form class="character__form">
+                    <select name="weapon" class="character__weapon-select">
+                        <option value="Iron Sword">Iron Sword</option>
+                        <option value="Iron Sword">Steel Sword</option>
+                        <option value="Iron Sword">Silver Sword</option>
+                    </select>
+                    <label class="character__health health flex">
+                        <span class="health__name">HP</span>
+                        <span class="health__current">23</span>
+                        /
+                        <span class="health__maximum">23</span>
+                        <div class="health__input flex">
+                            <input type="text" class="health__modifier">
+                            <button class="health__add button">+</button>
+                            <span class="health__divider">/</span>
+                            <button class="health__subtract button">-</button>
+                        </div>
+                    </label>
+                </form>
+                <table class="character__stats stats">
+                    <tbody>
+                        <tr>
+                            <th class="stats__name">STR</th>
+                            <td class="stats__value">03</td>
+                            <th class="stats__name">DMG</th>
+                            <td class="stats__value--right">07</td>
+                        </tr>
+                        <tr>
+                            <th class="stats__name">MAG</th>
+                            <td class="stats__value">03</td>
+                            <th class="stats__name">DMG</th>
+                            <td class="stats__value--right">-</td>
+                        </tr>
+                        <tr>
+                            <th class="stats__name">SKL</th>
+                            <td class="stats__value">04</td>
+                            <th class="stats__name">HIT</th>
+                            <td class="stats__value--right">10</td>
+                        </tr>
+                        <tr>
+                            <th class="stats__name"></th>
+                            <td class="stats__value"></td>
+                            <th class="stats__name">CRT</th>
+                            <td class="stats__value--right">1d4</td>
+                        </tr>
+                        <tr>
+                            <th class="stats__name">SPD</th>
+                            <td class="stats__value">07</td>
+                            <th class="stats__name">AS</th>
+                            <td class="stats__value--right">07</td>
+                        </tr>
+                        <tr>
+                            <th class="stats__name"></th>
+                            <td class="stats__value"></td>
+                            <th class="stats__name">AVO</th>
+                            <td class="stats__value--right">09</td>
+                        </tr>
+                        <tr>
+                            <th class="stats__name">LCK</th>
+                            <td class="stats__value">05</td>
+                            <th class="stats__name">DDG</th>
+                            <td class="stats__value--right">05</td>
+                        </tr>
+                        <tr>
+                            <th class="stats__name">DEF</th>
+                            <td class="stats__value">03</td>
+                            <th class="stats__name">PRT</th>
+                            <td class="stats__value--right">03</td>
+                        </tr>
+                        <tr>
+                            <th class="stats__name">RES</th>
+                            <td class="stats__value">04</td>
+                            <th class="stats__name">RSL</th>
+                            <td class="stats__value--right">04</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="character__notes banner banner--small padding-x text-center">
+                <h2 class="title">Notes</h2>
+                <form class="character__form">
+                    <textarea class="character__notes-field"></textarea>
+                </form>
+            </div>
+            <div class="character__emblems padding-x text-center">
+                <h2 class="title">Emblems</h2>
+                <div class="flex gap justify-center">
+                    <a href="#" class="icon icon--rond">
+                        <img src="assets/img/icons/axe.png" alt="Axe Emblem">
+                    </a>
+                    <a href="#" class="icon icon--rond">
+                        <img src="assets/img/icons/book.png" alt="Book Emblem">
+                    </a>
+                    <a href="#" class="icon icon--rond">
+                        <img src="assets/img/icons/sword.png" alt="Sword Emblem">
+                    </a>
+                </div>
+            </div>
+        </div>
+                <div class="character">
+            <nav class="character__navigation padding-x">
+                <img src="assets/img/icons/book.png" alt="Mage" class="icon icon--big">
+                <div class="flex gap">
+                    <a href="#" class="icon">
+                        <img src="assets/img/icons/weapon.png" alt="Random Weapon">
+                    </a>
+                    <a href="#" class="icon">
+                        <img src="assets/img/icons/loot.png" alt="Random Loot">
+                    </a>
+                    <a href="#" class="icon">
+                        <img src="assets/img/icons/cross.png" alt="Delete Character">
+                    </a>
+                </div>
+                <span class="character__level">12</span>
+            </nav>
+            <div class="character__information banner padding-x">
+                <form class="character__form">
+                    <select name="weapon" class="character__weapon-select">
+                        <option value="Iron Sword">Iron Sword</option>
+                        <option value="Iron Sword">Steel Sword</option>
+                        <option value="Iron Sword">Silver Sword</option>
+                    </select>
+                    <label class="character__health health flex">
+                        <span class="health__name">HP</span>
+                        <span class="health__current">23</span>
+                        /
+                        <span class="health__maximum">23</span>
+                        <div class="health__input flex">
+                            <input type="text" class="health__modifier">
+                            <button class="health__add button">+</button>
+                            <span class="health__divider">/</span>
+                            <button class="health__subtract button">-</button>
+                        </div>
+                    </label>
+                </form>
+                <table class="character__stats stats">
+                    <tbody>
+                        <tr>
+                            <th class="stats__name">STR</th>
+                            <td class="stats__value">03</td>
+                            <th class="stats__name">DMG</th>
+                            <td class="stats__value--right">07</td>
+                        </tr>
+                        <tr>
+                            <th class="stats__name">MAG</th>
+                            <td class="stats__value">03</td>
+                            <th class="stats__name">DMG</th>
+                            <td class="stats__value--right">-</td>
+                        </tr>
+                        <tr>
+                            <th class="stats__name">SKL</th>
+                            <td class="stats__value">04</td>
+                            <th class="stats__name">HIT</th>
+                            <td class="stats__value--right">10</td>
+                        </tr>
+                        <tr>
+                            <th class="stats__name"></th>
+                            <td class="stats__value"></td>
+                            <th class="stats__name">CRT</th>
+                            <td class="stats__value--right">1d4</td>
+                        </tr>
+                        <tr>
+                            <th class="stats__name">SPD</th>
+                            <td class="stats__value">07</td>
+                            <th class="stats__name">AS</th>
+                            <td class="stats__value--right">07</td>
+                        </tr>
+                        <tr>
+                            <th class="stats__name"></th>
+                            <td class="stats__value"></td>
+                            <th class="stats__name">AVO</th>
+                            <td class="stats__value--right">09</td>
+                        </tr>
+                        <tr>
+                            <th class="stats__name">LCK</th>
+                            <td class="stats__value">05</td>
+                            <th class="stats__name">DDG</th>
+                            <td class="stats__value--right">05</td>
+                        </tr>
+                        <tr>
+                            <th class="stats__name">DEF</th>
+                            <td class="stats__value">03</td>
+                            <th class="stats__name">PRT</th>
+                            <td class="stats__value--right">03</td>
+                        </tr>
+                        <tr>
+                            <th class="stats__name">RES</th>
+                            <td class="stats__value">04</td>
+                            <th class="stats__name">RSL</th>
+                            <td class="stats__value--right">04</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="character__notes banner banner--small padding-x text-center">
+                <h2 class="title">Notes</h2>
+                <form class="character__form">
+                    <textarea class="character__notes-field"></textarea>
+                </form>
+            </div>
+            <div class="character__emblems padding-x text-center">
+                <h2 class="title">Emblems</h2>
+                <div class="flex gap justify-center">
+                    <a href="#" class="icon icon--rond">
+                        <img src="assets/img/icons/axe.png" alt="Axe Emblem">
+                    </a>
+                    <a href="#" class="icon icon--rond">
+                        <img src="assets/img/icons/book.png" alt="Book Emblem">
+                    </a>
+                    <a href="#" class="icon icon--rond">
+                        <img src="assets/img/icons/sword.png" alt="Sword Emblem">
+                    </a>
+                </div>
             </div>
         </div>
     </main>

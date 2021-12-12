@@ -1,0 +1,48 @@
+.health {
+    padding: 1rem 0;
+    justify-content: space-between;
+
+    &__maximum {
+        margin-right: 0.5rem;
+    }
+
+    &__input {
+        position: relative;
+    }
+
+    &__modifier {
+        width: 195px;
+        text-align: right;
+        padding-left: 3rem;
+        background-color: transparent;
+        border: none;
+        border-bottom-color: var(--color-dark-400);
+        border-bottom-style: solid;
+        border-bottom-width: 2px;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__add,
+    &__divider,
+    &__subtract {
+        position: absolute;
+        padding: 0;
+    }
+
+    &__add {
+        left: 0.5rem;
+    }
+
+    &__divider {
+        left: 1.4rem;
+        pointer-events: none;
+    }
+
+    &__subtract {
+        left: 2rem;
+        align-self: baseline;
+    }
+}

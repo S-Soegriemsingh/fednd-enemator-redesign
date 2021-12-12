@@ -1,0 +1,14 @@
+.stats {
+    width: 100%;
+
+    &__name {
+        text-align: left;
+    }
+
+    &__value {
+
+        &--right {
+            text-align: right;
+        }
+    }
+}

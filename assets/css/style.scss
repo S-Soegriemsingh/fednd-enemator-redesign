@@ -1,9 +1,9 @@
+// Default
 @use 'partials/variables';
 @use 'partials/reset';
 @use 'partials/utility';
-@use 'partials/layout';
-@use 'partials/global';
 
-// Prototype
-@use 'partials/prototype';
-@use 'partials/character';
+// Character
+@use 'partials/character/character';
+@use 'partials/character/health';
+@use 'partials/character/stats';

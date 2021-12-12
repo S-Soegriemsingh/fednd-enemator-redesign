@@ -1,15 +1,28 @@
+// Container
+.container {
+    padding: 0 1rem;
+    margin: auto;
+    min-height: 100vh;
+    overflow-x: auto;
+}
+
 // Flexbox
 .flex {
     display: flex;
     align-items: center;
 }
 
-// Container
-.container {
-    padding: 0 1em;
-    margin: auto;
-    min-height: 100vh;
-    overflow-x: auto;
+.gap {
+    gap: 0.5rem;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+// Spacing
+.padding-x {
+    padding: 1rem;
 }
 
 // Screen Readers
@@ -27,7 +40,13 @@
 
 // Banner Shape
 .banner {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 75% 75%, 25% 75%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 75% 75%, 25% 75%, 0 85%);
+    padding-bottom: 9rem;
+
+    &--small {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 75% 75%, 25% 75%, 0 100%);
+        padding-bottom: 4.5rem;
+    }
 }
 
 // Icons
@@ -41,8 +60,30 @@
     width: 40px;
 
     &--big {
-        border-width: 0.75rem;
+        border-width: 0.5rem;
         padding: 0.5rem;
-        width: 140px;
+        width: 100px;
     }
+
+    &--rond {
+        border-radius: 50%;
+        width: 30px;
+    }
+}
+
+// Buttons
+.button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+// Text
+.text-center {
+    text-align: center;
+}
+
+.title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
 }

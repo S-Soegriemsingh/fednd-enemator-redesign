@@ -1,0 +1,60 @@
+.character {
+    min-width: var(--spacing-width);
+
+    &__navigation {
+        background-color: var(--color-blue-300);
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        height: 70px;
+        margin-top: 50px; // half of image height
+    }
+
+    &__toolbar {
+        display: flex;
+        gap: 0.5rem;
+    }
+
+    &__level {
+        font-size: 52px;
+        line-height: 0.75;
+    }
+
+    &__information {
+        background-color: var(--color-blue-300);
+        position: relative;
+        z-index: 1;
+    }
+
+    &__weapon-select {
+        width: 100%;
+        background-color: var(--color-blue-400);
+        border-color: var(--color-dark-400);
+        border-radius: 4px;
+        border-style: solid;
+        padding: 0.25rem;
+    }
+
+    &__notes {
+        background-color: var(--color-sand-400);
+        margin-top: -8.75rem;
+    }
+
+    &__notes-field {
+        width: 80%;
+        resize: none;
+        background-color: transparent;
+        border-color: var(--color-dark-400);
+        border-radius: 4px;
+        border-style: solid;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__emblems {
+        background-color: var(--color-rose-400);
+        margin-top: -4.25rem;
+    }
+}
